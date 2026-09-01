@@ -10,8 +10,6 @@ class Solution:
             v1 = l[i]
             v2 = l[c-i]
 
-            print(i, v1, v2)
-
             if m == 1 and i == h and c-i == h:
                 return l[i] == l[c-i]
             if m == 0 and i == h-1 and c-i == h:
