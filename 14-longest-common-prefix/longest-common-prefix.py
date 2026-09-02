@@ -1,7 +1,6 @@
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         ans1 = ""
-        ans2 = ""
         ptr = 0
 
         while True:
@@ -16,11 +15,8 @@ class Solution:
                         return ans1
                 else:
                     return ans1
-                print(count, w, curr)
             if match:
                 ans1 += curr
-
             ptr += 1
-            print(ans1)
-            print("\n")
+
         return ans2
