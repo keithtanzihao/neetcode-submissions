@@ -5,14 +5,13 @@ class Solution:
             "}": "{",
             "]": "["
         }
-        l_a = ["(", "{", "["]
         l = ""
 
         if len(s)%2 != 0:
             return False
 
         for c in s:
-            if c in l_a:
+            if c not in map:
                 l += c
 
             if not l:
