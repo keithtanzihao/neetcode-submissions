@@ -7,16 +7,12 @@ class Solution:
             curr = ""
             match = True
             for w in strs:
-                if ptr < len(w):
-                    if curr == "":
-                        curr = w[ptr]
-                    if curr != w[ptr]:
-                        match = False
-                        return ans1
-                else:
+                if ptr >= len(w):
                     return ans1
-            if match:
-                ans1 += curr
-            ptr += 1
+                if curr == "":
+                    curr = w[ptr]
+                if curr != w[ptr]:
+                    return ans1
 
-        return ans2
+            ans1 += curr
+            ptr += 1
