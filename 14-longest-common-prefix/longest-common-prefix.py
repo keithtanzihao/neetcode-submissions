@@ -5,7 +5,7 @@ class Solution:
 
         while True:
             curr = ""
-            match = True
+
             for w in strs:
                 if ptr >= len(w):
                     return ans1
