@@ -5,21 +5,21 @@ class Solution:
             "}": "{",
             "]": "["
         }
-        l = ""
+        l = []
 
         if len(s)%2 != 0:
             return False
 
         for c in s:
             if c not in map:
-                l += c
+                l.append(c)
 
             if not l:
                 return False
 
             if c in map:
                 if l[-1] == map[c]:
-                    l = l[:-1]
+                    l.pop()
                 else:
                     return False
         
