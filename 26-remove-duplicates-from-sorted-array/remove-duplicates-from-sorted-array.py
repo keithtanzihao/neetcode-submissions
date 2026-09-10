@@ -1,15 +1,13 @@
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        num_dict = {}
-        i = 0
+        curr_v = -101
+        pt = 0
 
-        while i < len(nums):
-            n = nums[i]
-            if n not in num_dict:
-                num_dict[n] = n
-                i+=1
-            else:
-                nums.pop(i)
+        for i in nums:
+            if i > curr_v:
+                nums[pt] = i
+                curr_v = i
+                pt += 1
 
-        return len(nums)
+        return pt
         
