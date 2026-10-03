@@ -13,7 +13,6 @@ class Solution:
             elif cp > p: # new value is provide's larger profile, new profit
                 p = cp
 
-            print(c, cp, p, prices[i])
             i+=1
 
         return p
