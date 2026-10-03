@@ -6,12 +6,6 @@ class Solution:
                 r[i] = 1
             else:
                 r[i] += 1
-        print(r)
-        fk = 0
-        fv = 0
-        for k, v in r.items():
-            if v > fv:
-                fv = v
-                fk = k
-        
-        return fk
+            
+            if r[i] > (len(nums) / 2):
+                return i
